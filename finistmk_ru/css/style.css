@@ -1207,8 +1207,8 @@ header {
 .contactInfo {
 	position: relative;
 	float: left;
-	width: 33%;
-	min-height: 36.5em;
+	width: 32%;
+	min-height: 44.5em;
 	border-right: 1px solid rgba(255, 255, 255, 0.9);
 }
 .contactInfo h1 {
