@@ -1,5 +1,9 @@
 {
- "name": "App",
+  "name": "Мебельная компания Финист",
+ "short_name": "Финист МК",
+ "display": "standalone",
+ "background_color": "#3b3b3b",
+ "theme_color": "#3b3b3b",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
