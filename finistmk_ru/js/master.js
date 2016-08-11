@@ -34,7 +34,7 @@ jQuery( document ).ready( function( $ ) {
 	});
 	
 	// Image Lightbox
-	$("a[rel^='prettyPhoto']").prettyPhoto({overlay_gallery: true,social_tools: false,theme:'light_square'});
+	$("a[rel^='prettyPhoto']").prettyPhoto({overlay_gallery: true,social_tools: false});
 	  
 	// Fixed Top bar
 	$(window).bind('scroll', function() {
