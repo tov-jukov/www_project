@@ -297,7 +297,7 @@ i.round {
 }
 .carousel-indicators li, .carousel-indicators li.active {
 	border: none;
-	margin: 1px 5px !important;
+	margin: 1px 22px !important;
 	width: 1.15em;
 	height: 1.15em;
 }
