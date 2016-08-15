@@ -335,6 +335,11 @@ i.round {
 .pp_social .facebook {
 	min-width: 100px;
 }
+.vcenter {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+}
 /* ================================= */
 /* ------------ HEADER ------------ */
 /* ================================= */
@@ -1311,7 +1316,7 @@ html, body, div, p, table, tr, td, th, tbody, tfoot, ul, li, ol, dl, dd, dt, fie
 /* ================================= */
 /* --------- TRANSITION CSS --------- */
 /* ================================= */
-a, header.BGdark .logo a img, header, header.BGdark, .BGsecondary, #productList .carousel-indicators > li img, .BGdark .rightnav, .main-menu li, .main-menu li a i, ul li, ul li:before, .otherProducts .link span i, .otherProducts li, .otherProducts img, .otherProducts li h6, .member img, .otherProducts .link, .member .info, .member .info h6, .galleryImg a span, .galleryImg img, .contactInfo p i, .contactInfo p, .social ul li a i, .btn, .otherProducts li .price, .extra > div i, .panel-default > .panel-heading h4 a:before, .social li i, .panel-default > .panel-heading h4.active a {
+a, header.BGdark .logo a img, header, header.BGdark, .BGsecondary, #productList .carousel-indicators > li img, .BGdark .rightnav, .main-menu li, .main-menu li a i, ul li, ul li:before, .otherf .link span i, .otherProducts li, .otherProducts img, .otherProducts li h6, .member img, .otherProducts .link, .member .info, .member .info h6, .galleryImg a span, .galleryImg img, .contactInfo p i, .contactInfo p, .social ul li a i, .btn, .otherProducts li .price, .extra > div i, .panel-default > .panel-heading h4 a:before, .social li i, .panel-default > .panel-heading h4.active a {
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
