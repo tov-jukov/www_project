@@ -223,7 +223,7 @@ jQuery( document ).ready( function( $ ) {
 // Google Map	  
 	 
 	function initialize() {
-	  var myLatlng = new google.maps.LatLng(49.5522614,34.5229921); // Add your coordinates here (Lat, Lng)
+	  var myLatlng = new google.maps.LatLng(57.952367,59.993142); // Add your coordinates here (Lat, Lng)
 	  var mapOptions = {
 		zoom: 17,
 		scrollwheel:false,
@@ -237,7 +237,7 @@ jQuery( document ).ready( function( $ ) {
       '</div>'+
       '<h5>Мебельная фабрика</h5>'+ // Your Company Image here
       '<div id="bodyContent">'+
-      '<p>телефон: <strong>+38-0532-555-777</strong></p>' +
+      '<p>телефон: <strong>8 (3435) 379-301</strong></p>' +
       '</div>'+
       '</div>';
 

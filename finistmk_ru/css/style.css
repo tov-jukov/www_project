@@ -547,7 +547,7 @@ header {
 	position: relative;
 	margin: -9em auto 1em auto;
 	text-align: center;
-	left: 0;
+	left: 2em;
 	width: 100%;
 }
 #productList .carousel-indicators > li {
