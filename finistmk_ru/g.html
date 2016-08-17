@@ -19,8 +19,42 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-   <!-- Таблица стилей CSS -->
+ 
+ <!-- Скрипт на языке JavaScript --> 
+<script type="text/javascript">
+$(document).ready(function(){
+  // Инициализирует карусель
+  $(".start-slide").click(function(){
+    $("#myCarousel2").carousel('cycle');
+  });
+  // Останавливает процесс автоматической смены слайдов карусели
+  $(".pause-slide").click(function(){
+    $("#myCarousel2").carousel('pause');
+  });
+  // Осуществляет переход на предыдущий слайд
+  $(".prev-slide").click(function(){
+    $("#myCarousel2").carousel('prev');
+  });
+  // Осуществляет переход на следующий слайд
+  $(".next-slide").click(function(){
+    $("#myCarousel2").carousel('next');
+  });
+  // Осуществляет переход на 0 слайд карусели 
+  $(".slide-one").click(function(){
+    $("#myCarousel2").carousel(0);
+  });
+  // Осуществляет переход на 1 слайд карусели 
+  $(".slide-two").click(function(){
+    $("#myCarousel2").carousel(1);
+  });
+  // Осуществляет переход на 2 слайд карусели 
+  $(".slide-three").click(function(){
+    $("#myCarousel2").carousel(2);
+  });
+});
+</script>
+ 
+<!-- Стили CSS -->
 <style type="text/css">
 h2{
     margin: 0;     
@@ -34,59 +68,102 @@ h2{
     text-align: center;
     height: 300px !important;
 }
-.carousel{
-    margin-top: 20px;
+.carousel2{
+	margin: 20px 0;
 }
+.control-buttons{
+	text-align:center;
+}
+.examplecarusel{
+	margin: 20px;
+} 
 </style>
  
-<!-- Карусель -->
-<div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
-  <!-- Индикаторы для карусели -->
-  <ol class="carousel-indicators">
-    <!-- Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" -->
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <!-- Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1" -->
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <!-- Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" -->
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>   
+ <body>
+
+<!-- HTML код карусели -->
+<div class="examplecarusel">
+<div id="myCarousel2" class="carousel slide" data-interval="3000" data-ride="carousel">
   <!-- Слайды карусели -->
   <div class="carousel-inner">
-    <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
+    <!-- 1 слайд -->
     <div class="active item">
       <h2>Слайд №1</h2>
       <div class="carousel-caption">
         <h3>Заголовок 1 слайда</h3>
-        <p>Текст (описание) 1 слайда...</p>
+        <p>Описание 1 слайда...</p>
       </div>
     </div>
-    <!-- Слайд №2 -->
     <div class="item">
-      <h2>Slide 2</h2>
+      <h2>Слайд №2</h2>
       <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+        <h3>Заголовок 2 слайда</h3>
+        <p>Описание 2 слайда...</p>
       </div>
     </div>
-    <!-- Слайд №3 -->
     <div class="item">
-      <h2>Slide 3</h2>
+      <h2>Слайд №3</h2>
       <div class="carousel-caption">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h3>Заголовок 3 слайда</h3>
+        <p>Описание 3 слайда...</p>
       </div>
     </div>
   </div>
-  <!-- Навигация для карусели -->
-  <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+</div>  
+<!-- Кнопки управления -->
+<div style="margin-top: 20px; text-align:center;">
+  <input type="button" class="btn btn-info start-slide" value="Старт">
+  <input type="button" class="btn btn-info pause-slide" value="Пауза">
+  <input type="button" class="btn btn-info prev-slide" value="Предыдущий">
+  <input type="button" class="btn btn-info next-slide" value="Следующий">
+  <input type="button" class="btn btn-info slide-one" value="Слайд 1">
+  <input type="button" class="btn btn-info slide-two" value="Слайд 2">            
+  <input type="button" class="btn btn-info slide-three" value="Слайд 3">
 </div>
+
+<div id="myCarousel3" class="carousel slide">
+  <!-- Индикаторы карусели -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel3" data-slide-to="1"></li>
+    <li data-target="#myCarousel3" data-slide-to="2"></li>
+   </ol>   
+   <!-- Слайды карусели -->
+   <div class="carousel-inner">
+     <!-- 1 слайд -->
+     <div class="item active">
+       <img src="/bootstrap/images/slide1.png" alt="1 слайд">
+     </div>
+     <!-- 2 слайд -->
+     <div class="item">
+       <img src="/bootstrap/images/slide2.png" alt="2 слайд">
+     </div>
+     <!-- 3 слайд -->
+     <div class="item">
+       <img src="/bootstrap/images/slide3.png" alt="3 слайд">
+     </div>
+   </div>
+   <!-- Система навигации для карусели, с помощью которой осуществляется переход на предыдущий и следующий слайд -->
+   <a class="carousel-control left" href="#myCarousel3" 
+      data-slide="prev">‹</a>
+   <a class="carousel-control right" href="#myCarousel3" 
+      data-slide="next">›</a>
+</div> 
+ 
+<!-- Скрипт на языке JavaScript, который выводит всплывающее сообщение перед началом процесса смены слайда -->
+<script>
+  $(function(){
+    $('#myCarousel3').on('slide.bs.carousel', function () {
+      alert("Событие срабатывает перед началом процесса смены слайда.");
+    });
+  });
+</script>
+
+
+
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
