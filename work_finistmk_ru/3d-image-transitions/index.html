@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>3D Image Transitions</title>
+		<!--[if lte IE 8]>
+ 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	<link rel="stylesheet" href="css/flux.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<!--<link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'> -->
+		
+		<!-- Use jQuery for best compatibility with other CSS3 enabled browsers -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/flux.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				if(!flux.browser.supportsTransitions)
+					alert("Flux Slider requires a browser that supports CSS3 transitions");
+					
+				window.f = new flux.slider('#sliderZ', {
+					pagination: false,
+					controls: false,
+					transitions: ['explode', 'tiles3d', 'bars3d', 'cube', 'turn'],
+					autoplay: false
+				});
+				
+				$('.transitions').click(function(event){
+					event.preventDefault();
+					window.f.next($(event.target).data('transition'), $(event.target).data('params'));
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<section class="container">
+			<div id="sliderZ">
+				<div><img src="imgs/peacock.jpg" alt="" /> </div>
+				<div><img src="imgs/koi.jpg" alt="" /> </div>
+				<div><div class="col-md-7 col-sm-12 col-xs-12 serviceInfo wow fadeInUp" data-wow-delay="0.5s" data-wow-offset="75">
+                            <h2><span>1</span>Кухонные гарнитуры</h2>
+                            <div class="price">Оптовая цена <span>3750<small> руб</small></span></div>
+                            <p>Мебельная компания Финист уже более 10 лет производит кухонные гарнитуры по индивидуальным размерам.</p>           
+
+                            <ul class="list-inline option">
+                            	<li>Заказать</li>
+                            </ul>
+                        </div>
+                    </div><!-- end item --> </div>
+			</div>
+			<ul class="transitions">
+				<li><button type="button" data-transition="explode" data-params='{"rows": 4}'><img src="imgs/peacock.jpg" alt="" height="100px" width="100px"></button></button></li>
+				<li><button type="button" data-transition="tiles3d" data-params='{"columns": 6}'><img src="imgs/peacock.jpg" alt="" height="100px" width="100px"></button></button></li>
+				<li><button type="button" data-transition="bars3d"><img src="imgs/peacock.jpg" alt="" height="100px" width="100px"></button></li>
+				<li><button type="button" data-transition="cube"><img src="imgs/peacock.jpg" alt="" height="100px" width="100px"></button></button></li>
+				<li><button type="button" data-transition="turn"><img src="imgs/peacock.jpg" alt="" height="100px" width="100px"></button></button></li>
+			</ul>
+			
+		</section>
+	</body>
+</html>
