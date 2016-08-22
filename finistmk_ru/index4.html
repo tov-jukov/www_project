@@ -67,33 +67,6 @@
         }
     </style>
 
-<script type="text/javascript">
-  
-$('#myCarousel0').carousel({
-  interval: 10000
-})
-
-$('.carousel .item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-  
-  if (next.next().length>0) {
-    next.next().children(':first-child').clone().appendTo($(this));
-  }
-  else {
-    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
-});
-
-
-</script>
-
-
-
-
 </head>
 
 <body  data-spy="scroll" data-target="#menu" data-offset="100">
@@ -562,10 +535,10 @@ $('.carousel .item').each(function(){
     <div class="row">
         <div class="ab">
           <h2 class="wow fadeInRight" data-wow-delay="1s">Более чем в 60 городах</h2>
-          <h2 class="wow fadeInLeft" data-wow-delay="2s" align="right">130 салонов</h2>
+          <h2 class="wow fadeInLeft text-right" data-wow-delay="2s">130 салонов</h2>
         </div>  
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 wow fadeIn opaque page-block-full" data-wow-offset="75" data-wow-delay="1.5s">
-              <img class="img-responsive wow zoomInUp" data-wow-offset="250" data-wow-duration="2.5s" src="img/map.png" alt="" />
+              <img class="img-responsive wow zoomInUp"  data-wow-offset="250" data-wow-duration="2.5s" src="img/map.png" alt="" />
             </div>
             
         </div><!-- end row -->
@@ -924,48 +897,9 @@ $('.carousel .item').each(function(){
         </div>
 </div>
 
+
              
-</section>
-<!-- END SHOPS -->
-<section id="gw" class="page-block">
- 
-
-
-
-
-
-
-
-<div class="col-md-7">
-<div class="carousel slide" id="myCarousel0">
-  <div class="carousel-inner">
-    <div class="item active">
-      <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/bbbbbb/fff&amp;text=1" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/CCCCCC&amp;text=2" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/eeeeee&amp;text=3" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f4f4f4&amp;text=4" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&amp;text=5" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="col-md-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&amp;text=6" class="img-responsive"></a></div>
-    </div>
-  </div>
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-</div>
-</div>
-
-
-
-</section>
+</section><!-- END SHOPS -->
 
 <!--START SUBSCRIBE -->
 <section id="subscribe" class="page-block-small wow fadeInUp BGlight" data-wow-offset="75" data-wow-delay="1s">
@@ -1103,10 +1037,9 @@ $('.carousel .item').each(function(){
   <!-- /Yandex.Metrika counter -->
 
 
-
 <script type="text/javascript">
   jQuery(document).ready(function($) {
- 
+  
         $('#myCarousel').carousel({
                 interval: 5000
         });
@@ -1119,15 +1052,17 @@ $('.carousel .item').each(function(){
             var id = parseInt(id);
             $('#myCarousel').carousel(id);
         });
- 
+  
  
         // When the carousel slides, auto update the text
         $('#myCarousel').on('slid.bs.carousel', function (e) {
-                 var id = $('.item.active').data('slide-number');
+                 var id = $('#myCarousel div.item.active').data('slide-number');
                 $('#carousel-text').html($('#slide-content-'+id).html());
         });
 });
 </script>
+
+
 
 
 
