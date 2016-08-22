@@ -830,8 +830,14 @@ header {
 	margin-top: 50px;
 	z-index: 10;
 }
-
-
+/* ================================= */
+/* ------------ EQUIPMENT ------------ */
+/* ================================= */
+#equipment {
+	background-image: url(../img/slider/slide6.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
 /* ================================= */
 /* ------ SPECIAL OFFER ------ */
 /* ================================= */
