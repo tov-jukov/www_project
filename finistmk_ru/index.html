@@ -1041,7 +1041,7 @@
                         </div>
                         <div class="form-row">
                         <input type="text" id="security" name="security" class="form-control hide" value="">
-                          <input type="submit" value="ОТПРАВИТЬ" class="btn btn-dark btn-lg" id="submit" name="name">
+                          <input type="submit" value="ОТПРАВИТЬ" class="btn btn-dark btn-lg" id="submit" name="btn_name">
                         </div>
                 </form>
             </div>
@@ -1132,18 +1132,6 @@ $('.owl-carousel').owlCarousel({
 
 </script>
 
-<script>
-
-$(function() {
-  $("a[rel]").overlay(function() {
-    var wrap = this.getContent().find("div.wrap");
-    if (wrap.is(":empty")) {
-      wrap.load(this.getTrigger().attr("href"));
-    }
-  });
-});
-
-</script>
 
 </body>
 </html>
