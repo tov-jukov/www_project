@@ -1242,6 +1242,7 @@ header {
 }
 .contactInfo h1 {
     color: #fff;
+    font-size: 3.5em;
     top: 50%;
     right: 0.3em;
     bottom: auto;
