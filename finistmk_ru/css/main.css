@@ -1,0 +1,39 @@
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+	
+}
+.hidden {
+	display: none;
+}
+#pp form {
+	padding: 50px 20px;
+	background-color: #fff;
+	max-width: 320px;
+	margin: auto;
+	position: relative;
+}
+#pp form input {
+	width: 100%;
+	margin-bottom: 10px;
+}
