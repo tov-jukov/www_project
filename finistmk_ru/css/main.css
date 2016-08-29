@@ -49,3 +49,7 @@ body textarea:required:valid {
     margin-left:-200px; /*Смещаем блок на половину всей ширины влево*/
     margin-top:-100px; /*Смещаем блок на половину высоты вверх*/
 }
+
+input .pp {
+	top:100px;
+}
