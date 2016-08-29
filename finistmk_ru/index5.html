@@ -265,7 +265,7 @@
                        </div>
                         <div class="col-md-7 col-sm-12 col-xs-12 serviceInfo">
                             <h2><span>2</span>Шкафы-купе</h2>
-                            <div class="price">Оптовая цена <span>3550<small> грн</small></span></div>
+                            <div class="price">Оптовая цена <span>3550<small> руб</small></span></div>
                             <p>У нас Вы можете заказать шкафы купе по индивидуальным размерам, с применением высококачественной фурнитуры</p>
 
                             <ul class="list-inline option">
@@ -291,7 +291,7 @@
 
                         <div class="col-md-7 col-sm-12 col-xs-12 serviceInfo">
                             <h2><span>3</span>Корпусная мебель</h2>
-                            <div class="price">Оптовая цена <span>3550<small> грн</small></span></div>
+                            <div class="price">Оптовая цена <span>3550<small> руб</small></span></div>
                             <p>Мебельная компания Финист производит любую корпусную мебель для дома и офиса. Осуществляем комплексные поставки.</p>         
                             <ul class="list-inline option">
                             	<li><a href="#form2" class="popup">Свяжитесь со мной</a></li>
@@ -1052,32 +1052,28 @@
 <!-- END  CONTACT -->
 
 <!-- -->
-	<div class="row hidden">
-	<div class="col-md-4 col-md-offset-4 col-sm-12">
-		<form id="form0" class="pp">
+	<div class="hidden">
+		<form id="form0">
 	    <!-- Hidden Required Fields -->
 	    <input type="hidden" name="project_name" value="МКФ">
 	    <input type="hidden" name="admin_email" value="tov-jukof@ya.ru">
-	    <input type="hidden" name="form_subject" value="Тест формы отправки">
+	    <input type="hidden" name="form_subject" value="Заявка звонка формы Кухонные гарнитуры">
 	    <!-- END Hidden Required Fields -->
-			<p class="white">Форма 0</p>
-			<input type="text" name="name" placeholder="Имя" /><br>
-			<input type="text" name="phone" placeholder="Телефон" /><br>
-			<button>Отправить</button>
+			<input type="text" name="name" placeholder="Имя">
+			<input type="text" name="phone" placeholder="Телефон">
+			<button class="btn btn-dark btn-lg">Отправить</button>
 		</form>
 	</div>
-	</div>
-	<div class="hidden pp">
-		<form id="form1" class="pp">
+	<div class="hidden">
+		<form id="form1">
 	    <!-- Hidden Required Fields -->
 	    <input type="hidden" name="project_name" value="МКФ">
 	    <input type="hidden" name="admin_email" value="tov-jukof@ya.ru">
-	    <input type="hidden" name="form_subject" value="Тест формы отправки">
+	    <input type="hidden" name="form_subject" value="Заявка звонка формы Шкафы-купе">
 	    <!-- END Hidden Required Fields -->
-			<p class="white">Форма 1</p>
-			<input type="text" name="name" placeholder="Имя" /><br>
-			<input type="text" name="phone" placeholder="Телефон" /><br>
-			<button>Отправить</button>
+			<input type="text" name="name" placeholder="Имя">
+			<input type="text" name="phone" placeholder="Телефон" />
+			<button class="btn btn-dark btn-lg">Отправить</button>
 		</form>
 	</div>
 	<div class="hidden">
@@ -1085,15 +1081,25 @@
 	    <!-- Hidden Required Fields -->
 	    <input type="hidden" name="project_name" value="МКФ">
 	    <input type="hidden" name="admin_email" value="tov-jukof@ya.ru">
-	    <input type="hidden" name="form_subject" value="Тест формы отправки">
+	    <input type="hidden" name="form_subject" value="Заявка звонка формы Корпусная мебель">
 	    <!-- END Hidden Required Fields -->
-			<p>Форма 2</p>
-			<input type="text" name="name" placeholder="Имя" /><br>
-			<input type="text" name="phone" placeholder="Телефон" /><br>
-			<button>Отправить</button>
+			<input type="text" name="name" placeholder="Имя" />
+			<input type="text" name="phone" placeholder="Телефон" />
+			<button class="btn btn-dark btn-lg">Отправить</button>
 		</form>
 	</div>
-
+<div class="hidden">
+	<form id="form3">
+	    <!-- Hidden Required Fields -->
+	    <input type="hidden" name="project_name" value="МКФ">
+	    <input type="hidden" name="admin_email" value="tov-jukof@ya.ru">
+	    <input type="hidden" name="form_subject" value="Заявка звонка формы Изделия из искусственного камня">
+	    <!-- END Hidden Required Fields -->
+			<input type="text" name="name" placeholder="Имя" />
+			<input type="text" name="phone" placeholder="Телефон" />
+			<button class="btn btn-dark btn-lg">Отправить</button>
+		</form>
+	</div>
 
 
 <!-- -->
@@ -1200,9 +1206,130 @@
 		});
 	
 	});
-
-
 </script>
 
+<script>
+	$(document).ready(function() {
+
+	$(".popup").magnificPopup();
+
+	//Цели для Яндекс.Метрики и Google Analytics
+	$(".count_element").on("click", (function() {
+		ga("send", "event", "goal", "goal");
+		yaCounterXXXXXXXX.reachGoal("goal");
+		return true;
+	}));
+
+	//Аякс отправка форм
+	//Документация: http://api.jquery.com/jquery.ajax/
+	$("#form0").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				$.magnificPopup.close();
+			}, 1000);
+		});
+		return false;
+		});
+	
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+
+	$(".popup").magnificPopup();
+
+	//Цели для Яндекс.Метрики и Google Analytics
+	$(".count_element").on("click", (function() {
+		ga("send", "event", "goal", "goal");
+		yaCounterXXXXXXXX.reachGoal("goal");
+		return true;
+	}));
+
+	//Аякс отправка форм
+	//Документация: http://api.jquery.com/jquery.ajax/
+	$("#form1").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				$.magnificPopup.close();
+			}, 1000);
+		});
+		return false;
+		});
+	
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+
+	$(".popup").magnificPopup();
+
+	//Цели для Яндекс.Метрики и Google Analytics
+	$(".count_element").on("click", (function() {
+		ga("send", "event", "goal", "goal");
+		yaCounterXXXXXXXX.reachGoal("goal");
+		return true;
+	}));
+
+	//Аякс отправка форм
+	//Документация: http://api.jquery.com/jquery.ajax/
+	$("#form2").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				$.magnificPopup.close();
+			}, 1000);
+		});
+		return false;
+		});
+	
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+
+	$(".popup").magnificPopup();
+
+	//Цели для Яндекс.Метрики и Google Analytics
+	$(".count_element").on("click", (function() {
+		ga("send", "event", "goal", "goal");
+		yaCounterXXXXXXXX.reachGoal("goal");
+		return true;
+	}));
+
+	//Аякс отправка форм
+	//Документация: http://api.jquery.com/jquery.ajax/
+	$("#form3").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				$.magnificPopup.close();
+			}, 1000);
+		});
+		return false;
+		});
+	
+	});
+</script>
 </body>
 </html>

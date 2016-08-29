@@ -26,30 +26,14 @@ body textarea:required:valid {
 .hidden {
 	display: none;
 }
-#pp form {
+form#form0, form#form1, form#form2, form#form3 {
 	padding: 50px 20px;
-	background-color: #fff;
+	background-color: #ccc;
 	max-width: 320px;
 	margin: auto;
 	position: relative;
 }
-#pp form input {
-	width: 100%;
-	margin-bottom: 10px;
-}
 
-.pp {
-    width:400px; /*Ширина блока*/
-    height:200px; /*Высота блока*/
-    margin:0 auto;
-    overflow:visible;
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin-left:-200px; /*Смещаем блок на половину всей ширины влево*/
-    margin-top:-100px; /*Смещаем блок на половину высоты вверх*/
-}
-
-input .pp {
-	top:100px;
+form#form0 input, form#form1 input, form#form2 input, form#form3 input {
+	padding-right: 60px;
 }
