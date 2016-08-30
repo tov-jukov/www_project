@@ -33,7 +33,11 @@ form#form0, form#form1, form#form2, form#form3 {
 	margin: auto;
 	position: relative;
 }
-
 form#form0 input, form#form1 input, form#form2 input, form#form3 input {
 	padding-right: 60px;
 }
+.mmap {
+	position: relative;
+	margin-top: -40px;
+}
+
