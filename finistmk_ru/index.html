@@ -149,7 +149,7 @@
    <a class="next" href="#"> <i class="fa fa-chevron-right"></i></a>
   </div><!-- end slides-navigation -->
   
-  <div><a href="#offer"><div class="holder"><i class="fa fa-chevron-down moreArrow moving"></i></div></a></div>
+  <div><a href="#features"><div class="holder"><i class="fa fa-chevron-down moreArrow moving"></i></div></a></div>
   
   
 </section>
@@ -161,7 +161,7 @@
 		<div class="col-lg-6 col-sm-12 BGprime"></div>
         <div class="col-lg-6 col-sm-12 BGsecondary"></div>
 	</div>
-	<div class="container">
+	<div id="features" class="container">
     	<div class="row">
         	<div class="col-md-4 col-sm-12 col-xs-12 wow bounceInUp" data-wow-duration="1s" data-wow-offset="75">
                 <h4><small>Большой выбор</small>Шкафов купе</h4>
@@ -1120,7 +1120,7 @@
 <script src="js/custom.js"></script>
 <script src="js/master.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
 <script src="libs/magnific-popup/jquery.magnific-popup.js"></script>
 
 
@@ -1170,6 +1170,31 @@
 	});
 </script>
 
+<!--ContactForm -->
+<script>
+$(document).ready(function() {
+
+  //E-mail Ajax Send
+  $("form#contact_form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      alert("Спасибо за заявку!");
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
+
+});
+</script>
+
+<!--Form0 -->
 <script>
 	$(document).ready(function() {
 
@@ -1200,38 +1225,7 @@
 	
 	});
 </script>
-
-<script>
-	$(document).ready(function() {
-
-	$(".popup").magnificPopup();
-
-	//Цели для Яндекс.Метрики и Google Analytics
-	$(".count_element").on("click", (function() {
-		ga("send", "event", "goal", "goal");
-		yaCounterXXXXXXXX.reachGoal("goal");
-		return true;
-	}));
-
-	//Аякс отправка форм
-	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form0").submit(function() {
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize()
-		}).done(function() {
-			alert("Спасибо за заявку!");
-			setTimeout(function() {
-				$.magnificPopup.close();
-			}, 1000);
-		});
-		return false;
-		});
-	
-	});
-</script>
-
+<!--Form1 -->
 <script>
 	$(document).ready(function() {
 
@@ -1262,7 +1256,7 @@
 	
 	});
 </script>
-
+<!--Form2 -->
 <script>
 	$(document).ready(function() {
 
@@ -1290,10 +1284,9 @@
 		});
 		return false;
 		});
-	
 	});
 </script>
-
+<!--Form3 -->
 <script>
 	$(document).ready(function() {
 
@@ -1324,5 +1317,6 @@
 	
 	});
 </script>
+
 </body>
 </html>
