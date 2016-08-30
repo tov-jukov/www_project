@@ -826,10 +826,19 @@ header {
 }
 
 .ab {
-	position: absolute;
-	margin-top: 50px;
+//	position: absolute;
+	margin-top: 10px;
 	z-index: 10;
 }
+.abc {
+//	position: absolute;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	z-index: 10;
+	color: white;
+}
+
 /* ================================= */
 /* ------------ EQUIPMENT ------------ */
 /* ================================= */
@@ -1167,7 +1176,7 @@ header {
 	background-color: rgba(255, 255, 255, 0.7);
 	color: rgba(0, 0, 0, 0.5);
 	font-size: 1.15em;
-	padding-right: 1em;
+	padding-right: 5em;
 }
 /* ================================= */
 /* ------ MAP AND SOCIAL ------ */
