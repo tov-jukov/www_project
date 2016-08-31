@@ -56,7 +56,7 @@ h1 {
 	line-height: 0.em;
 }
 h2 {
-	font-size: 3.35em;
+	font-size: 3.15em;
 	font-weight: 800;
 	margin-bottom: 0.35em;
 }
@@ -249,7 +249,7 @@ a.top:hover {
 }
 .page-block {
 	position: relative;
-	padding: 6.5em 0 6.5em;
+	padding: 6.2em 0 6.2em;
 	overflow: hidden;
 }
 .page-block-small {
@@ -604,6 +604,13 @@ header {
 	color: #fff;
 	text-align: center;
 }
+
+#productList h2 {
+	font-size: 2.0em;
+	font-weight: 800;
+	margin-bottom: 0.32em;
+}
+
 .price {
 	font-size: 1.35em;
 	font-weight: 500;
