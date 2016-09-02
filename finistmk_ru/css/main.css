@@ -40,4 +40,6 @@ form#form0 input, form#form1 input, form#form2 input, form#form3 input {
 	position: relative;
 	margin-top: -20px;
 }
-
+.slide-header {
+	font-size: 1.8em;
+}
