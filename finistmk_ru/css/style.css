@@ -830,6 +830,8 @@ header {
 
 .ab h2 {
 	color: white;
+	font-size: 2.4em;
+
 }
 
 .ab {
@@ -846,6 +848,9 @@ header {
 	color: white;
 }
 
+.mmap {
+	position: relative;
+}
 /* ================================= */
 /* ------------ EQUIPMENT ------------ */
 /* ================================= */
@@ -1731,6 +1736,11 @@ header {
 	position: relative;
 	background-color: #333;
 }
+
+.ab > h2 {
+	font-size: 4em;
+	color: red;
+}
 .rightnav {
 	text-align: left;
 	margin: 0 0 1em;
@@ -1809,6 +1819,10 @@ header {
 #contact .container {
 	width: 100%;
 }
+.mmap img {
+	width: 80%;
+	height: 80%;
+}
 }
 @media only screen and (min-width: 320px) and (max-width: 570px) and (orientation: landscape) {
 #slides .slide .slide-caption .container {
@@ -1826,6 +1840,7 @@ header {
 	width: 100%;
 	float: none;
 }
+
 }
 /* iPhone 4 & 5 (portrait & landscape)----------- */
 @media only screen and (min-width: 320px) and (max-width: 570px) {
