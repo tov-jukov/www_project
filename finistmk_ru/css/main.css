@@ -43,3 +43,9 @@ form#form0 input, form#form1 input, form#form2 input, form#form3 input {
 .slide-header {
 	font-size: 1.8em;
 }
+.fttxt {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px dashed #fff;
+	margin: -10px;
+}
