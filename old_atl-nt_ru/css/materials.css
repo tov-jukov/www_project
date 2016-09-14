@@ -1,0 +1,305 @@
+#materials_section {
+	height: 900px; /* здесь должна быть указана высота экрана */
+	}
+
+#materials_section.special {
+	height: 600px;
+	}
+
+.material_block {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	overflow: hidden;
+	font-family: RobotoSlab-Regular;
+	border: 2px solid rgb(230, 230, 230);
+	}
+
+.material_block .inner {
+	width: 100%;
+	height: 450px; /* тут нужно скриптом указать половину высоты экрана */
+	display: table;
+	transition: all .5s;
+	}
+
+.material_block .inner_sub {
+	display: table-cell;
+	vertical-align: middle;
+	}
+
+.material_block:nth-child(1) {top: 0; left: 0;}
+.material_block:nth-child(2) {top: 0; right: 0;}
+.material_block:nth-child(3) {bottom: 0; left: 0;}
+.material_block:nth-child(4) {bottom: 0; right: 0;}
+
+.material_block:nth-child(1) .material_bg {background-image: url(/img/materials/01.jpg);}
+.material_block:nth-child(2) .material_bg {background-image: url(/img/materials/02.jpg);}
+.material_block:nth-child(3) .material_bg {background-image: url(/img/materials/04.jpg);}
+.material_block:nth-child(4) .material_bg {background-image: url(/img/materials/03.jpg);}
+
+.material_block.special {top: 0; left: 25%; height: 450px;}
+
+.material_block.special-1 .material_bg {background-image: url(/img/materials/01.jpg);}
+.material_block.special-2 .material_bg {background-image: url(/img/materials/02.jpg);}
+.material_block.special-3 .material_bg {background-image: url(/img/materials/04.jpg);}
+.material_block.special-4 .material_bg {background-image: url(/img/materials/03.jpg);}
+
+
+.material_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: 110% auto;
+	background-position: center;
+	z-index: 2;
+	transition: all .5s;
+	}
+
+.material_bg_hider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: repeat;
+	background-image: url(/img/bg_hider.png);
+	}
+
+.material_block .top_part {
+	text-align: center;
+	color: white;
+	z-index: 3;
+	}
+
+.material_big_title {
+	text-align: center;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: white;
+	opacity: 1;
+	height: 65px;
+	z-index: 3;
+	overflow: hidden;
+	font-family: RobotoSlab-Bold;
+	transition: all .5s;
+	}
+
+.material_block .top_part img,
+.material_info {
+	display: inline-block;
+	vertical-align: middle;
+	}
+
+.material_block .top_part img {
+	width: 160px;
+	height: 160px;
+	box-shadow: inset 0 0 10px white;
+	border-radius: 50%;
+	margin-right: 0;
+	margin-bottom: 50px;
+	}
+
+.material_info {
+	text-align: left;
+	left: -100px;
+	width: 0px;
+	top: -27px;
+	opacity: 0;
+	overflow: hidden;
+	transition: all .5s;
+	}
+
+.material_info .info_wrapper {
+	width: 200px;
+	}
+
+.material_info .to_ext_info {
+	color: white;
+	}
+
+.material_title {
+	font-weight: normal;
+	font-size: 28px;
+	font-family: RobotoSlab-Bold;
+	text-align: left;
+	margin: 0 0 5px;
+	}
+
+.material_info p {
+	font-size: 12px;
+	margin-bottom: 10px;
+	}
+
+.material_info button {
+	border-radius: 4px;
+	font-size: 12px;
+	text-shadow: 0 -1px 0 rgba(50, 50, 50, .2);
+	border: 0;
+	border-bottom: 5px solid rgb(199, 99, 0);
+	}
+
+.hidden_part {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	background-color: white;
+	z-index: 1;
+	}
+
+.hidden_part .material_types,
+.hidden_part .material_tonns {
+	display: table;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	transition: all .5s;
+	}
+
+.material_types_elem,
+.material_tonns_elem {
+	height: 100px;
+	display: table-cell;
+	vertical-align: middle;
+	cursor: pointer;
+	text-align: center;
+	border-right: 1px solid rgb(200, 200, 200);
+	font-size: 12px;
+	transition: all .3s;
+	}
+
+.material_types_elem:hover,
+.material_tonns_elem:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 100, 100);
+    border-right: 1px solid rgb(100, 100, 100);
+	}
+
+.material_types_row {
+	display: table-row;
+	width: 100%;
+	height: 50px;
+	}
+
+.material_types_row .material_types_elem {
+	height: 50px;
+	font-size: 12px;
+	}
+
+.material_types_row:nth-child(2) .material_types_elem {
+	border-top: 1px solid rgb(200, 200, 200);
+	}
+
+/* ======================= */
+
+.material_block:hover .material_bg {
+	background-size: 150% auto;
+	height: calc(100% - 100px);
+	}
+
+.material_block.tonns_active:hover .material_bg {
+	background-size: 150% auto;
+	height: calc(100% - 45px);
+	}
+
+.material_block:hover .inner {
+	height: 350px;/* здесь нужно указать половину высоты экрана без высоты нижней части*/
+	}
+
+.material_block.tonns_active .inner {
+	height: 405px;
+	}
+
+.material_block:hover .material_big_title {
+	opacity: 0;
+	height: 0;
+	}
+
+.material_block:hover .material_info {
+	width: 200px;
+	left: 0px;
+	opacity: 1;
+	}
+
+.material_block:hover .top_part img {
+	margin-right: 25px;
+	}
+
+/* ======================= */
+
+.material_tonns form {
+	width: 300%;
+	left: -100%;
+	transition: all .5s;
+	}
+
+.query_failed,
+.query_success,
+.phone_input_wrapper,
+.tonns_input_wrapper,
+.order_submit_wrapper {
+	padding: 5px;
+	height: 100%;
+	float: left;
+	vertical-align: center;
+	width: 11.11%;
+	}
+
+.phone_input_wrapper input,
+.tonns_input_wrapper input,
+.order_submit_wrapper button {
+	height: 100%;
+	width: 100%;
+	}
+
+.order_submit_wrapper button {
+	float: left;
+	width: 49%;
+	border: 0;
+	color: white;
+	transition: all .2s;
+	}
+
+.order_submit_wrapper button:first-child {
+	margin-right: 2%;
+	background-color: rgb(249, 99, 0);
+	}
+
+.order_submit_wrapper button:last-child {
+	background-color: rgb(200, 200, 200);
+	}
+
+.order_submit_wrapper button:last-child:hover {
+	background-color: rgb(150, 150, 150);
+	}
+
+.query_failed,
+.query_success {
+	width: 33.33%;
+	text-align: center;
+	font-size: 14px;
+	top: 7px;
+	}
+
+.disabler {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .9);
+	transition: all .7s;
+	z-index: 4;
+	}
+
+.disabler.active {
+	transition: all .7s;
+	opacity: 1;
+	}
+

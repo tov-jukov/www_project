@@ -1,0 +1,4 @@
+User-agent: *
+Host: atl-nt.ru
+Disallow:
+Sitemap: http://atl-nt.ru/sitemap.xml

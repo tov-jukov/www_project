@@ -848,9 +848,7 @@ header {
 	color: white;
 }
 
-.mmap {
-	position: relative;
-}
+
 /* ================================= */
 /* ------------ EQUIPMENT ------------ */
 /* ================================= */
@@ -1454,6 +1452,7 @@ header.BGdark .logo a img {
 	background-attachment: scroll;
 	background-size: 150%;
 }
+
 }
 @media only screen and (min-width: 1201px) and (max-width: 1400px) {
 #slides .slide .slide-caption .container {
@@ -1517,6 +1516,7 @@ html, body, div, p, table, tr, td, th, tbody, tfoot, ul, li, ol, dl, dd, dt, fie
 	margin:0 auto;
 }
 }
+
 /* iPads (portrait and landscape) ----------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 html, body, div, p, table, tr, td, th, tbody, tfoot, ul, li, ol, dl, dd, dt, fieldset, blockquote, cite, input, select, textarea, button, a, section, article, aside, header, footer, nav {
@@ -1736,11 +1736,6 @@ header {
 	position: relative;
 	background-color: #333;
 }
-
-.ab > h2 {
-	font-size: 4em;
-	color: red;
-}
 .rightnav {
 	text-align: left;
 	margin: 0 0 1em;
@@ -1822,6 +1817,10 @@ header {
 .mmap img {
 	width: 80%;
 	height: 80%;
+}
+
+.abd {
+	font-size: 1.2em;
 }
 }
 @media only screen and (min-width: 320px) and (max-width: 570px) and (orientation: landscape) {
